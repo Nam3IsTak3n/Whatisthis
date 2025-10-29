@@ -1,1 +1,6 @@
+body { font-family: Arial; text-align: center; margin: 20px; }
+input { margin: 5px; padding: 5px; }
+button { margin: 5px; padding: 5px 10px; }
+#chat { margin-top:20px; }
+#chat-log { list-style: none; padding:0; max-height:200px; overflow-y:auto; }
 
