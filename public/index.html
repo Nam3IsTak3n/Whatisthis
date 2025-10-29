@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Poker & Blackjack Multiplayer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="site-password-screen">
+    <h2>Enter site password</h2>
+    <input id="site-pass" placeholder="Site Password">
+    <input id="username-site" placeholder="Username">
+    <button onclick="checkSitePassword()">Enter</button>
+    <p id="site-pass-msg"></p>
+  </div>
+
+  <div id="login-screen" style="display:none;">
+    <h2>Login / Create Account</h2>
+    <input id="login-username" placeholder="Username">
+    <input id="login-password" placeholder="Password" type="password">
+    <button onclick="login()">Login</button>
+    <p id="login-msg"></p>
+  </div>
+
+  <div id="game-screen" style="display:none;">
+    <h2>Welcome <span id="user-name"></span></h2>
+    <button onclick="joinPoker()">Play Poker</button>
+    <button onclick="joinBlackjack()">Play Blackjack</button>
+    <div id="chat">
+      <ul id="chat-log"></ul>
+      <input id="chat-msg" placeholder="Message">
+      <button onclick="sendChat()">Send</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
